@@ -6,7 +6,7 @@
 /*   By: abourkab <abourkab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 21:35:42 by abourkab          #+#    #+#             */
-/*   Updated: 2022/12/07 10:23:14 by abourkab         ###   ########.fr       */
+/*   Updated: 2022/12/07 17:21:58 by abourkab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,16 @@ int	test_newline(char *tr)
 	i = 0;
 	if (!tr)
 		return (0);
+	if (tr[0] == '\n')
+		return (0);
 	while (tr[i])
 	{
 		if (tr[i] == '\n' && tr[i + 1] == '\n')
 			return (0);
 		i++;
 	}
+	if (tr[i - 1] == '\n')
+		return (0);
 	return (1);
 }
 

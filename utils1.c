@@ -6,7 +6,7 @@
 /*   By: abourkab <abourkab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:13:09 by abourkab          #+#    #+#             */
-/*   Updated: 2022/12/05 21:21:13 by abourkab         ###   ########.fr       */
+/*   Updated: 2022/12/07 17:22:09 by abourkab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,7 @@ void	initialize_var(t_vars *vars, int fd, char *tr)
 	vars->tb_z = -50;
 	vars->tb_i = 0;
 	vars->tb_j = 0;
-	vars->mlx = mlx_init();
-	vars->height = 0;
+ 	vars->height = 0;
 	while (vars->s[vars->height] != 0)
 		vars->height++;
 	vars->height *= 50;

@@ -6,7 +6,7 @@
 /*   By: abourkab <abourkab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 14:10:36 by abourkab          #+#    #+#             */
-/*   Updated: 2022/12/05 21:20:39 by abourkab         ###   ########.fr       */
+/*   Updated: 2022/12/07 17:22:30 by abourkab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	main(int argc, char **v)
 	if (test(&vars, tr, &index) == 0)
 		return (0);
 	vars.s = ft_split(tr, '\n');
+	vars.mlx = mlx_init();
 	start_window(&vars);
 	put_picture_pixels(&vars);
 	mlx_hook(vars.win, 2, 0, key_hook, &vars);
